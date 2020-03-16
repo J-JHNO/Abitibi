@@ -1,0 +1,470 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://PlantSeeds/PlantSeed.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World_complete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Backgrounds/platform3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Backgrounds/platform1.png" type="Texture" id=7]
+
+[node name="World-2" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 35, 1, 0, 36, 1, 0, 65536, 1, 0, 65571, 1, 0, 65572, 1, 0, 131072, 1, 0, 131107, 1, 0, 131108, 1, 0, 196608, 1, 0, 196643, 1, 0, 196644, 1, 0, 262144, 1, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262179, 1, 0, 262180, 1, 0, 327680, 1, 0, 327694, 0, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 0, 0, 327715, 1, 0, 327716, 1, 0, 393216, 1, 0, 393222, 0, 0, 393230, 1, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 393234, 1, 0, 393243, 0, 0, 393251, 1, 0, 393252, 1, 0, 458752, 1, 0, 458757, 0, 0, 458758, 1, 0, 458759, 0, 0, 458766, 1, 0, 458767, 1, 0, 458768, 1, 0, 458769, 1, 0, 458770, 1, 0, 458775, 0, 0, 458787, 1, 0, 458788, 1, 0, 524288, 1, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 1, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 524323, 1, 0, 524324, 1, 0 )
+
+[node name="World_complete" parent="TileMap" instance=ExtResource( 3 )]
+position = Vector2( 2185.37, 466.54 )
+
+[node name="Background" parent="TileMap" instance=ExtResource( 4 )]
+
+[node name="PlantSeed" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 846.108, 478.183 )
+
+[node name="Darkness" type="Node2D" parent="."]
+
+[node name="Spikes" parent="Darkness" instance=ExtResource( 5 )]
+position = Vector2( 1611.8, 497.095 )
+
+[node name="Spikes2" parent="Darkness" instance=ExtResource( 5 )]
+position = Vector2( 1664.14, 493.485 )
+
+[node name="Spikes3" parent="Darkness" instance=ExtResource( 5 )]
+position = Vector2( 1721, 495.29 )
+
+[node name="Spikes4" parent="Darkness" instance=ExtResource( 5 )]
+position = Vector2( 1761.61, 496.193 )
+
+[node name="Spikes5" parent="Darkness" instance=ExtResource( 5 )]
+position = Vector2( 1688.51, 477.24 )
+
+[node name="Tuto" type="Node2D" parent="."]
+
+[node name="001" type="Node2D" parent="Tuto"]
+position = Vector2( 0, 171.745 )
+
+[node name="ColorRect" type="ColorRect" parent="Tuto/001"]
+margin_left = 115.0
+margin_top = 34.0
+margin_right = 385.0
+margin_bottom = 187.0
+color = Color( 0.145098, 0.168627, 0.188235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tuto/001"]
+margin_left = 140.0
+margin_top = 56.0
+margin_right = 376.0
+margin_bottom = 168.0
+text = "	The forest needs your help! 
+	You must make it to the tree of life
+	but danger awaits you ahead.
+	
+	Press 'a' and 'd' 
+	to move left and right 
+	and 'w' to jump."
+align = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="002" type="Node2D" parent="Tuto"]
+position = Vector2( 473.13, 178.743 )
+
+[node name="ColorRect" type="ColorRect" parent="Tuto/002"]
+margin_left = 115.0
+margin_top = 34.0
+margin_right = 385.0
+margin_bottom = 187.0
+color = Color( 0.145098, 0.168627, 0.188235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tuto/002"]
+margin_left = 135.25
+margin_top = 49.35
+margin_right = 371.25
+margin_bottom = 165.35
+text = "	Grow a vine at the 
+	marked spot by pressing an arrow key. 
+	The direction of the arrow 
+	controls the direction.
+	Press any arrow key to replant."
+align = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="003" type="Node2D" parent="Tuto"]
+position = Vector2( 1297.5, 173.152 )
+
+[node name="ColorRect" type="ColorRect" parent="Tuto/003"]
+margin_left = 115.0
+margin_top = 34.0
+margin_right = 385.0
+margin_bottom = 187.0
+color = Color( 0.145098, 0.168627, 0.188235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tuto/003"]
+margin_left = 127.0
+margin_top = 47.0
+margin_right = 373.0
+margin_bottom = 173.0
+text = "	Watch out for the darkness! 
+	
+	Touch it and you'll die!
+	
+	Press 'q' or 'e' to use a left/right air dash after jumping to avoid it.
+	"
+align = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Roc1" type="Sprite" parent="."]
+position = Vector2( 119.418, 527.777 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc2" type="Sprite" parent="."]
+position = Vector2( 216.288, 536.128 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc4" type="Sprite" parent="."]
+position = Vector2( 291.447, 532.788 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc3" type="Sprite" parent="."]
+position = Vector2( 1387.09, 559.511 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc15" type="Sprite" parent="."]
+position = Vector2( 1687.72, 556.17 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc16" type="Sprite" parent="."]
+position = Vector2( 1787.93, 549.49 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc17" type="Sprite" parent="."]
+position = Vector2( 1893.15, 547.819 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc18" type="Sprite" parent="."]
+position = Vector2( 1995.03, 549.49 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc19" type="Sprite" parent="."]
+position = Vector2( 2108.6, 556.17 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc6" type="Sprite" parent="."]
+position = Vector2( 1283.53, 546.149 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc20" type="Sprite" parent="."]
+position = Vector2( 2197.12, 549.49 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc14" type="Sprite" parent="."]
+position = Vector2( 1582.5, 551.16 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc13" type="Sprite" parent="."]
+position = Vector2( 1478.95, 537.798 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc21" type="Sprite" parent="."]
+position = Vector2( 1503.5, 487.397 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc22" type="Sprite" parent="."]
+position = Vector2( 1755.51, 415.025 )
+scale = Vector2( 0.259925, 0.398997 )
+texture = ExtResource( 7 )
+
+[node name="Roc5" type="Sprite" parent="."]
+position = Vector2( 999.604, 297.292 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc8" type="Sprite" parent="."]
+position = Vector2( 418.38, 404.184 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc7" type="Sprite" parent="."]
+position = Vector2( 558.676, 542.809 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc10" type="Sprite" parent="."]
+position = Vector2( 655.546, 546.149 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc9" type="Sprite" parent="."]
+position = Vector2( 752.417, 554.5 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc12" type="Sprite" parent="."]
+position = Vector2( 850.875, 560.852 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Roc11" type="Sprite" parent="."]
+position = Vector2( 1099.81, 295.622 )
+scale = Vector2( 0.399637, 0.490654 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 366.605, 470.156 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 466.816, 475.167 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 366.605, 541.974 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite19" type="Sprite" parent="."]
+position = Vector2( 32.5685, 548.655 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite20" type="Sprite" parent="."]
+position = Vector2( 25.8878, 413.37 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite22" type="Sprite" parent="."]
+position = Vector2( 30.8983, 480.177 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite25" type="Sprite" parent="."]
+position = Vector2( 27.558, 216.289 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite24" type="Sprite" parent="."]
+position = Vector2( 25.8878, 413.37 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite23" type="Sprite" parent="."]
+position = Vector2( 27.558, 284.766 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite28" type="Sprite" parent="."]
+position = Vector2( 27.558, 97.7058 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite27" type="Sprite" parent="."]
+position = Vector2( 27.558, 354.914 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite26" type="Sprite" parent="."]
+position = Vector2( 20.8772, 157.832 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite21" type="Sprite" parent="."]
+position = Vector2( 27.558, 29.2281 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 466.816, 546.984 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 946.355, 527.354 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite45" type="Sprite" parent="."]
+position = Vector2( 945.54, 556.676 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 1021.32, 548.655 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 1084.78, 546.984 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 1184.99, 551.995 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 950.674, 413.37 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 953.973, 470.444 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 1176.64, 475.167 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 1159.94, 415.04 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite16" type="Sprite" parent="."]
+position = Vector2( 948.436, 346.645 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite17" type="Sprite" parent="."]
+position = Vector2( 1086.45, 468.486 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite29" type="Sprite" parent="."]
+position = Vector2( 2299, 541.974 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite30" type="Sprite" parent="."]
+position = Vector2( 2280.63, 468.486 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite32" type="Sprite" parent="."]
+position = Vector2( 2335.75, 456.795 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite31" type="Sprite" parent="."]
+position = Vector2( 2317.38, 383.307 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite36" type="Sprite" parent="."]
+position = Vector2( 2270.61, 394.998 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite35" type="Sprite" parent="."]
+position = Vector2( 2252.24, 321.51 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite34" type="Sprite" parent="."]
+position = Vector2( 2307.36, 309.819 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite33" type="Sprite" parent="."]
+position = Vector2( 2288.98, 236.331 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite40" type="Sprite" parent="."]
+position = Vector2( 2314.04, 236.331 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite39" type="Sprite" parent="."]
+position = Vector2( 2295.66, 162.843 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite38" type="Sprite" parent="."]
+position = Vector2( 2350.78, 151.151 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite37" type="Sprite" parent="."]
+position = Vector2( 2332.41, 77.6634 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite44" type="Sprite" parent="."]
+position = Vector2( 2282.3, 104.386 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite43" type="Sprite" parent="."]
+position = Vector2( 2263.93, 30.8983 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite42" type="Sprite" parent="."]
+position = Vector2( 2319.05, 19.2071 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite41" type="Sprite" parent="."]
+position = Vector2( 2300.68, -54.2809 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite18" type="Sprite" parent="."]
+position = Vector2( 1002.94, 475.167 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( 1022.99, 405.019 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( 1056.39, 369.945 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 1161.61, 349.903 )
+scale = Vector2( 0.462833, 0.461041 )
+texture = ExtResource( 6 )
